@@ -28,21 +28,21 @@ makeCacheMatrix <- function(x = matrix()) {
 
 
 
-## The function 'cacheSolve' caches the inverse of the matrix creadted with the above function
+## The function 'cacheSolve' caches the inverse of the matrix created with the above function
 
 cacheSolve <- function(x, ...) {
         i <- x$getinverse()
-        #assign the value of the inverse of the matrix 'x' to 'i'
+        #assign the value of the inverse of the matrix created with the above function to 'i'
         
         if(!is.null(i)) {
                 message("getting cached data")
                 return(i)
-        } # if the inverse 'i' has already been calculated, return 'i'
+        } # if the inverse of the matrix created with the above function has already been calculated, return 'i'
         
         data <- x$get()
         i <- solve(data, ...)
         x$setinverse(i)
         i
-        # if the inverse 'i' has not already been calculated,
+        # if the inverse of the matrix created with the above function has not already been calculated,
         # calculate the inverse 'i' and set the value of 'i'
 }

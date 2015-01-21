@@ -1,6 +1,6 @@
 ## Below a pair of functions caches the inverse of a matrix 
 
-## The function 'makeCacheMatrix' makes the list which has functions to assign values of a matrix
+## The function 'makeCacheMatrix' creates the list of functions that assign values of a matrix
 
 makeCacheMatrix <- function(x = matrix()) {
         i <- NULL
@@ -23,7 +23,7 @@ makeCacheMatrix <- function(x = matrix()) {
         list(set = set, get = get,
              setinverse = setinverse,
              getinverse = getinverse)
-        #make the list which has components that are 'set', 'get', 'setinverse' and 'getinverse' functions
+        #creat the list of 'set', 'get', 'setinverse' and 'getinverse' functions
 }
 
 

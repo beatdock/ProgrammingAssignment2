@@ -4,11 +4,13 @@
 
 makeCacheMatrix <- function(x = matrix()) {
         i <- NULL
+        #creat
         
         set <- function(y, r, c) {
                 x <<- matrix(y, r, c)
                 i <<- NULL
-        } #assign the value of the matrix which has 'y' data, 'r' rows, 'c' columns to 'x'
+        } #assign the value of the matrix which has 'y' data, 'r' rows, 'c' columns to the matrix 'x'
+          #assing NULL to 'i' to refresh the value of 'i'
         
         get <- function() x
         #get the value of the matrix 'x'
@@ -37,12 +39,12 @@ cacheSolve <- function(x, ...) {
         if(!is.null(i)) {
                 message("getting cached data")
                 return(i)
-        } # if the inverse of the matrix created with the above function has already been calculated, return 'i'
+        } # if the inverse of the matrix has already been calculated, return 'i'
         
         data <- x$get()
         i <- solve(data, ...)
         x$setinverse(i)
         i
-        # if the inverse of the matrix created with the above function has not already been calculated,
+        # if the inverse of the matrix has not already been calculated,
         # calculate the inverse 'i' and set the value of 'i'
 }

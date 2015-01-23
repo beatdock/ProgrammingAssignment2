@@ -4,7 +4,7 @@
 
 makeCacheMatrix <- function(x = matrix()) {
         i <- NULL
-        #creat
+        #creat Null value to be assigned the value of the inverse
         
         set <- function(y, r, c) {
                 x <<- matrix(y, r, c)
